@@ -5,6 +5,8 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/vue-deploy-gh-pages/", // github repo name
+  publicPath: process.env.NODE_ENV === "production" ? "/vue-deploy-gh-pages/" : "/",
   plugins: [
     vue(),
   ],
